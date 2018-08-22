@@ -22,6 +22,7 @@ app.controller('CalculatorCtrl', [ '$scope', 'CalculatorService', function($scop
     $scope.handleOperation = function(operation) {
 	$scope.handleInput(operation.symbol);
 	$scope.calcScreen += operation.symbol;
+	calcScreen.focus();
     }
 	
     $scope.handleInput = function(key) {

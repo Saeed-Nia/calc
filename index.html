@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <title>Calculator</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/calc.css" />
+
 <script src="js/angular.min.js"></script>
 <script src="js/controller.js"></script>
 <script src="js/service.js"></script>
@@ -18,14 +20,14 @@
 		<div class="row">
 			<div class="col-xs-12 col-xs-offset-5">
 				<div class="form-group">
-					<input type="text" id="calcScreen" name="calcScreen" ng-model="calcScreen" ng-keypress="handleInput($event.key)"></input>
+					<input type="text" id="calcScreen" name="calcScreen" ng-model="calcScreen" ng-keypress="handleInput($event.key)" autofocus></input>
 				</div>
 			</div>		
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-xs-offset-4">
 				<div class="form-group">
-					<label class="m-5 btn btn-info" ng-model="operation" ng-repeat="operation in ::operations" ng-click="handleOperation(operation)">{{operation.symbol}}</label>
+					<label class="btn btn-info btn-operation" ng-model="operation" ng-repeat="operation in ::operations" ng-click="handleOperation(operation)">{{operation.symbol}}</label>
 				</div>
 			</div>
 		</div>
